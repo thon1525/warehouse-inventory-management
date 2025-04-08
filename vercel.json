@@ -6,25 +6,26 @@
         "use": "@vercel/python",
         "config": {
           "maxLambdaSize": "15mb",
-          "runtime": "python3.9"
-        }
-      },
-      {
-        "src": "build_files.sh",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "staticfiles"
+          "runtime": "python3.11"
         }
       }
     ],
     "routes": [
       {
         "src": "/static/(.*)",
-        "dest": "/static/$1"
+        "dest": "/staticfiles/$1"
       },
       {
         "src": "/(.*)",
         "dest": "wims/wsgi.py"
       }
-    ]
+    ],
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "wims.settings"
+    },
+    "build": {
+      "commands": [
+        "python3 manage.py collectstatic --noinput"
+      ]
+    }
   }
