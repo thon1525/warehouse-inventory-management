@@ -58,3 +58,4 @@ wims/.env
 
 # Ignore local settings (optional)
 local_settings.py
+.vercel
