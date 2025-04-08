@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "wims_api/wsgi.py",
+        "src": "wims/wsgi.py",
         "use": "@vercel/python",
         "config": {
           "maxLambdaSize": "15mb",
@@ -24,7 +24,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "myproject/wsgi.py"
+        "dest": "wims/wsgi.py"
       }
     ]
   }
