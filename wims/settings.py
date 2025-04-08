@@ -183,11 +183,11 @@ SIMPLE_JWT = {
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": env("DB_NAME", default="wims_system"),  # Database name
-        "USER": env("DB_USER", default="avnadmin"),  # Aiven MySQL username
-        "PASSWORD": env("DB_PASSWORD", default="AVNS_OM2K1NOjEDQxx1DfpJP"),  # Aiven MySQL password
-        "HOST": env("DB_HOST", default="mysql-dc5dfda-thonhourn1525-e634.h.aivencloud.com"),  # Aiven MySQL host
-        "PORT": env("DB_PORT", default="22014"),  # Aiven MySQL port
+        "NAME": "wims_system",  # Database name
+        "USER": "avnadmin",  # Aiven MySQL username
+        "PASSWORD": "AVNS_OM2K1NOjEDQxx1DfpJP",  # Aiven MySQL password
+        "HOST": "mysql-dc5dfda-thonhourn1525-e634.h.aivencloud.com",
+        "PORT": "22014",  # Aiven MySQL port
         "OPTIONS": {
             "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
         },
