@@ -30,5 +30,6 @@
     "commands": [
       "python3 manage.py collectstatic --noinput"
     ]
-  }
+  },
+  "comment": "The 'builds' section is intentionally defined here to manage build settings in version control, overriding dashboard settings."
 }
